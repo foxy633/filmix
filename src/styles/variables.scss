@@ -1,0 +1,32 @@
+// Colors
+$colors: (
+  primary: #ffffff,
+  secondary: #ff6b08,
+  primary-text: #000000,
+  secondary-text: #545454,
+  description-text: #8c8c8c,
+  warning-text: #ff001b,
+  background-color-footer: #f7f7f7,
+  backgroundBtnHover: rgba(0, 0, 0, 0.56),
+);
+
+$media-extra-small: 320px;
+$media-small: 576px;
+$media-medium: 768px;
+$media-large: 992px;
+$media-extra-large: 1024px;
+// Font weight
+// @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap');
+$primary-font-stack: 'Roboto', sans-serif;
+
+// Font weight
+$regular-font-size: 400;
+$medium-font-size: 500;
+$black-font-size: 900;
+
+// Font size
+$headings-size-big: 30px;
+$input-size-btn: 22px;
+$footer-size: 16px;
+$warning-size: 14px;
+$headings-size: 12px;

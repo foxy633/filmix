@@ -1,0 +1,94 @@
+.footer {
+  background-color: color(background-color-footer);
+  &__networks {
+    padding-top: 10px;
+    &-name {
+      padding-top: 20px;
+      color: color(secondary-text);
+      text-align: center;
+      font-family: $primary-font-stack;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $input-size-btn;
+      line-height: 24px;
+    }
+    &-name::after {
+      content: '\261F';
+      font-family: $primary-font-stack;
+      font-size: $headings-size-big;
+      font-weight: $medium-font-size;
+    }
+    &-list {
+      @include center-flex($type: 'hor');
+    }
+    &-list > li:first-child {
+      margin-right: 10px;
+    }
+    &-listName {
+      padding-bottom: 10px;
+      padding-right: 20px;
+    }
+    &-listLink-google,
+    &-listLink-app {
+      cursor: pointer;
+      background-color: color(secondary);
+      width: 136px;
+      height: 44px;
+      border: none;
+      outline: none;
+      background-size: cover;
+      border-radius: 10px;
+      background-position: center;
+    }
+    &-listLink-google {
+      background-image: url('../../src/images/google.png');
+    }
+    &-listLink-app {
+      background-image: url('../../src/images/appl.png');
+    }
+  }
+
+  &__main {
+    @include center-flex($type: 'hor');
+    flex-wrap: wrap;
+    padding: 30px 0px;
+    font-family: $primary-font-stack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $footer-size;
+    line-height: 19px;
+    color: #545454;
+  }
+  &__link {
+    color: color(secondary-text);
+  }
+  &__like {
+    padding: 0px 10px;
+  }
+}
+
+@include media-query(medium) {
+  .footer__text-1 {
+    margin-bottom: 10px;
+  }
+}
+.dark-theme {
+  .footer {
+    background: #242934;
+    &__main {
+      color: #fff;
+    }
+    &__link {
+      color: #fff;
+    }
+    &__networks-name {
+      color: #fff;
+    }
+  }
+  .numpage__list-item {
+    color: #fff;
+  }
+  .item__border-active {
+    color: black;
+  }
+}

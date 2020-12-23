@@ -1,0 +1,45 @@
+<section class="slider">
+    <div class="container">
+        <div class="slider__premera"><span>Скоро в кино</span></div>
+    </div>
+    <div class="slider_container">
+
+        <div class="slider_body">
+
+            <div class="slider__btn"><a class=" slider-arrow slider_arrow-left" href="#"><svg class="arrow-left"
+                        viewBox="0 0 5 9">
+                        <path
+                            d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+                    </svg></a>
+            </div>
+
+            <div class="slider_main">
+
+                <div class="slider__lists">
+                    {{#each this}}
+                    <div class="slider_item">
+                        <a href="/movie/{{id}}">
+                            <img class="item "
+                                src="https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/{{backdrop_path}}" alt="">
+                            <p class="slider_name">{{title}}</p>
+                            <p class="slider_name_date">{{release_date}}</p>
+                        </a>
+
+                    </div>
+                    {{/each}}
+                </div>
+
+            </div>
+
+            <div class="slider__btn"><a class=" slider-arrow slider_arrow-right" href="#">
+                    <svg class="arrow-right" viewBox="0 0 5 9">
+                        <path
+                            d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z" />
+                    </svg></a>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>

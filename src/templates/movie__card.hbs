@@ -1,0 +1,43 @@
+<section class="choosed_movie" style="background-image: url('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/{{backdrop_path}}')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="movie_card" data-filmID='{{id}}'>
+      <div class="details-image">
+        <img class="movie_poster" src="https://image.tmdb.org/t/p/w220_and_h330_face{{poster_path}}" alt="poster {{title}}" />
+      </div>
+      <div class="details-info">
+        <p class="details-info__title">{{title}}</p>
+        <div class="parameters__container">
+          <div class="parameters">
+            <p class="parameters-title">Vote / Votes</p>
+            <p class="parameters-title">Popularity</p>
+            <p class="parameters-title">Original Title</p>
+            <p class="parameters-title">Genre</p>
+          </div>
+          <div class="values">
+            <span class="parameters-title__info">
+              <span class="vote">{{vote_average}}</span> /
+              <span class="votes">{{vote_count}}</span>
+            </span>
+            <span class="parameters-title__info">{{popularity}}</span>
+            <span class="parameters-title__info">{{title}}</span>
+            <span class="parameters-title__info">
+              {{#each genres}}
+              {{name}}{{#if @last}}{{else}}, {{/if}}
+              {{/each}}
+            </span>
+          </div>
+        </div>
+        <p class="details-about">about</p>
+        <p class="details-info__description">
+          {{overview}}
+        </p>
+        <form>
+          <button id="action__watched" class="button-action action__watched" data-lsKeys='watchedKey'>add to
+            watched</button>
+          <button id="action__queue" class="button-action action__queue" data-lsKeys='queueKey'>add to queue</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

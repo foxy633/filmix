@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  list-style: none;
+}
+
+body {
+  font-family: 'Roboto';
+  color: #000000;
+  &.dark-theme {
+    background-image: linear-gradient(
+      to right top,
+      #121212,
+      #1d1d23,
+      #242934,
+      #273747,
+      #274559,
+      #2c4a5e,
+      #304e62,
+      #355367,
+      #3e4e5f,
+      #444955,
+      #45464c,
+      #434343
+    );
+    color: #fff;
+  }
+  &.light-theme {
+    background: #abbaab; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #ffffff,
+      #abbaab
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #ffffff,
+      #abbaab
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: #333333;
+  }
+}
+
+.container {
+  max-width: 904px;
+  padding: 0 15px;
+  margin: 0 auto;
+  @include media-query(extra-large) {
+    max-width: 648px;
+  }
+  @include media-query(medium) {
+    max-width: 310px;
+  }
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  .main {
+    flex: 1 0 auto;
+  }
+  .footer {
+    flex: 0 0 auto;
+  }
+}
+
+.back_to_top {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 35px;
+  background: color(primary);
+  color: color(secondary);
+  cursor: pointer;
+  border-radius: 3px;
+  border: 4px color(secondary);
+  display: none;
+  opacity: 0.7;
+}
+
+.back_to_top:hover {
+  background: color(description-text);
+}
+
+.back_to_top-show {
+  display: block;
+}

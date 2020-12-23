@@ -1,0 +1,36 @@
+<section class="section__cards">
+    <div class="container">
+        <div class="cards__film-wrap">
+            {{#each this}}
+            <div class="card__film">
+                <div class="card__wrapper">
+                    <div class="card__overlay">
+                        <div class="card__img">
+                            <a class="card__img-title" href="#/movie/{{id}}"><img src="{{poster_path}}"
+                                    alt="poster {{title}}" class="card__img-film" /></a>
+                        </div>
+                        <a class="card__overlay-text" href="#/movie/{{id}}">
+                            <p class="card__vote_average text-over">{{vote_average}} / {{vote_count}}</p>
+                            <div class="reviews-container">
+                                <div class="review">
+                                    <span class="icon-container">{{popularity}}</span>
+                                    <div class="progress">
+                                        <div class="progress-done" data-done=""></div>
+                                    </div>
+                                    <span class="percent"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="card__text">
+                    <a href=" #/movie/{{id}}" class="card__film-name text">{{title}}</a>
+                    <br /><a href="#" class="card__film-about text">{{#each genres}}{{name}}{{#if @last}}{{else}},
+                        {{/if}}{{/each}} |
+                        {{year}}</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

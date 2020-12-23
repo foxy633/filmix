@@ -1,0 +1,108 @@
+<header class="header">
+    <div class="header__overlay"></div>
+    <div class="container">
+        <div class="header__checkbox">
+            <ul class="header__language">
+                <li>
+                    <button class="header__languageBtn-ru" data-language="ru">ru</button>
+                </li>
+                <li>
+                    <button class="header__languageBtn-en" data-language="en-US">en</button>
+                </li>
+                <li>
+                    <button class="header__languageBtn-uk" data-language="uk">uk</button>
+                </li>
+            </ul>
+
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <p class="fas fa-moon"></p>
+                <p class="fas fa-sun"></p>
+                <div class="ball"></div>
+            </label>
+        </div>
+
+        <div class="header__content">
+            <div class="header__logo">
+                <a class="header__link" href="#">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19.82 2H4.18C2.97602 2 2 2.97602 2 4.18V19.82C2 21.024 2.97602 22 4.18 22H19.82C21.024 22 22 21.024 22 19.82V4.18C22 2.97602 21.024 2 19.82 2Z"
+                            stroke="#818181" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M7 2V22" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M17 2V22" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M2 12H22" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M2 7H7" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M2 17H7" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M17 17H22" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M17 7H22" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <p class="header__logoName waviy">
+                        <span style="--i:1">F</span>
+                        <span style="--i:2">i</span>
+                        <span style="--i:3">l</span>
+                        <span style="--i:4">m</span>
+                        <span style="--i:5">i</span>
+                        <span style="--i:6">x</span>
+                    </p>
+                </a>
+            </div>
+
+            <nav>
+                <ul class="header__navList">
+                    <li>
+                        <a class="header__navListLink" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="header__navListLink" href="/library/queu">My library</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        {{!-- <div>
+            <ul class="header__language">
+                <li>
+                    <button class="header__languageBtn-ru" data-language="ru">ru</button>
+                </li>
+                <li>
+                    <button class="header__languageBtn-en" data-language="en-US">en</button>
+                </li>
+                <li>
+                    <button class="header__languageBtn-uk" data-language="uk">uk</button>
+                </li>
+            </ul>
+        </div> --}}
+        <div class="search__myFilmLibraryPage">
+            <div class="form-search-library">
+                <form class="form-search">
+                    <input type="search" autocomplete="off" name="text" placeholder="Поиск фильмов">
+                    <button class="inputBtn" type="submit" for="search">
+                    </button>
+                </form>
+                <p class="search__libraryFilmList headen">
+                    Search result not successful. Enter the correct movie name and
+                </p>
+            </div>
+
+            <ul class="search__navLibrary">
+                <li>
+                    <a href="/library/watched">
+                        <button class="search__navLibraryBtn-Watched">Watched</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="/library/queu">
+                        <button class="search__navLibraryBtn-Queue">Queue</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
